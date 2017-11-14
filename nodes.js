@@ -1,3 +1,5 @@
+// this node class will serve as the basic building block of all future tree classes
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -11,9 +13,13 @@ class Node {
   
   setLeftChild(left) {
     this.leftChild = left;
+    left.setParent(this);
   }
   
   setRightChild(right) {
     this.rightChild = right;
-  }
+    right.setParent(this);
+  }  
 }
+
+export default Node;
