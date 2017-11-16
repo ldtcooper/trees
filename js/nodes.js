@@ -28,6 +28,14 @@ class Node {
       return true;
     }
   }
+
+  toString() {
+    const thisVal = `Value: ${this.value}`;
+    const thisParent = `Parent Node: ${this.parent ? this.parent.value : "None"}`;
+    const thisRight = `Right Child: ${this.rightChild ? this.rightChild.value : "None"}`;
+    const thisLeft = `Left Child: ${this.leftChild ? this.leftChild.value : "None"}`;
+    return(`-----\n${thisVal}\n${thisParent}\n${thisRight}\n${thisLeft}\n-----`);
+  }
 }
 
-export default Node;
+// export default Node;
