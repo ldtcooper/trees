@@ -22,7 +22,11 @@ class Node {
   }
 
   endNode() {
-    return !(this.rightChild || this.leftChild);
+    if (this.rightChild || this.leftChild) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 
