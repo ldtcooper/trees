@@ -41,11 +41,15 @@ class BST {
     this.root = root;
   }
 
+  toString() {
+
+  }
+
   insert(nodeVal) {
     let currentNode = root;
     const newNode = new Node(nodeVal);
 
-    while (!currentNode.emptyNode()) {
+    while (currentNode.endNode() === false) {
       if (currentNode.value < nodeVal) {
         currentNode = currentNode.right;
       } else {
@@ -66,4 +70,4 @@ const root = new Node(5);
 const bst = new BST(root);
 bst.insert(4);
 bst.insert(6);
-console.log(bst);
+console.log(bst.root);
